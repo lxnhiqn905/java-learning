@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<include file="struts-login.xml"/>
+	
+	<package name="default" namespace="/tutorials" extends="struts-default">
+		<action name="best" class="vn.neways.action.TutorialBestAction">
+			<result name="success">/best.jsp</result>
+			<result name="failed">/error.jsp</result>
+		</action>
+		<action name="find" class="vn.neways.action.TutorialFindAction">
+			<result name="success">/found.jsp</result>
+			<result name="failed">/error.jsp</result>
+		</action>
+		<action name="search"
+			class="vn.neways.action.TutorialSearchAction">
+			<result name="success">/searchResult.jsp</result>
+			<result name="failed">/error.jsp</result>
+		</action>
+	</package>
+
+	<package name="search" namespace="/" extends="struts-default">
+		<action name="searchForm">
+			<result>/searchForm.jsp</result>
+		</action>
+	</package>
+	
+	<package name="check" namespace="/" extends="struts-default">
+		<action name="check*" class="vn.neways.action.{1}CheckAction">
+			<result name="success">/check{1}.jsp</result>
+		</action>
+	</package>
+	
+	<package name="seminar" namespace="/seminar" extends="struts-default">
+		<action name="" class="vn.neways.action.SeminarAction">
+			<result name="success">/pages/seminar/index.jsp</result>
+		</action>
+		<action name="list" class="vn.neways.action.SeminarAction" method="list">
+			<result name="success">/pages/seminar/list.jsp</result>
+		</action>
+		<action name="get" class="vn.neways.action.SeminarAction" method="get">
+			<result name="success">/pages/seminar/get.jsp</result>
+		</action>
+		<action name="add" class="vn.neways.action.SeminarAction" method="add">
+			<result name="success">/pages/seminar/add.jsp</result>
+		</action>
+		<action name="update" class="vn.neways.action.SeminarAction" method="update">
+			<result name="success">/pages/seminar/update.jsp</result>
+		</action>
+		<action name="delete" class="vn.neways.action.SeminarAction" method="delete">
+			<result name="success">/pages/seminar/delete.jsp</result>
+		</action>
+	</package>
+	
+</struts>

@@ -1,0 +1,7 @@
+-classpath 'C:\\Users\\NhiLX\\Exercism\\java\\hello-world\\build\\classes\\java\\main;C:\\Users\\NhiLX\\Exercism\\java\\hello-world\\build\\resources\\main'
+-d 'C:\\Users\\NhiLX\\Exercism\\java\\hello-world\\build\\docs\\javadoc'
+-doctitle 'hello-world API'
+-quiet 
+-windowtitle 'hello-world API'
+'C:\\Users\\NhiLX\\Exercism\\java\\hello-world\\src\\main\\java\\Greeter.java'
+'C:\\Users\\NhiLX\\Exercism\\java\\hello-world\\src\\main\\java\\Main.java'
